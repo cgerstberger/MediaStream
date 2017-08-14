@@ -1,6 +1,6 @@
-var filesApp = angular.module('filesApp', []);
+/*var filesApp = */angular.module('filesApp', []);
 
-filesApp.controller('FileTableController', function FileTableController($scope) {
+/*filesApp.controller('FileTableController', function FileTableController($scope) {
     $scope.files = [
         {
             filename: 'Moby - Flower',
@@ -16,3 +16,4 @@ filesApp.controller('FileTableController', function FileTableController($scope) 
         }
    ];
 });
+*/

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="filesApp">
+<html lang="en" ng-app="fileApp">
 <head>
 
     <!-- Basic Page Needs
@@ -29,8 +29,11 @@
 
     <!-- JS
   -------------------------------------------------- -->
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/angular.min.js"></script>
-    <script src="js/Controller/files.js"></script>
+    <script src="js/app.module.js"></script>
+    <script src="js/file-table/file-table.module.js"></script>
+    <script src="js/file-table/file-table.component.js"></script>
 
 </head>
 
@@ -44,18 +47,8 @@
             <div class="two column">1 + 2 = {{1+2}}</div>
         </div>
         <div class="main" style="margin-left: 10%; margin-right: 10%">
-            <div ng-controller="FileTableController">
-                <table class="u-full-width">
-                    <thead>
-                        <th>Filename</th>
-                        <th>File-extension</th>
-                    </thead>
-                    <tbody ng-repeat="file in files">
-                        <td>{{file.filename}}</td>
-                        <td>{{file.extension}}</td>
-                    </tbody>
-                </table>
-            </div>
+            <file-table></file-table>
+            <file-table></file-table>
         </div>
     </div>
     <div class="container">
