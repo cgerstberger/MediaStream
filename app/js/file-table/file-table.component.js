@@ -1,18 +1,16 @@
 angular
     .module('fileTable')
     .component('fileTable', {
-    template: '<table class="u-full-width">' + 
-                    '<thead>' + 
-                        '<th>Filename</th>' +
-                        '<th>File-extension</th>' +
-                    '</thead>' +
-                    '<tbody ng-repeat="file in $ctrl.files">' +
-                        '<td>{{file.filename}}</td>' +
-                        '<td>{{file.extension}}</td>' +
-                    '</tbody>' +
-                '</table>',
-    controller: //loadFilesViaAjax
-    function FileTableController(){
+    templateUrl: 'js/file-table/file-table.template.html',
+    controller: function($scope, $http){
+        $http.get('http://localhost/MediaStream/files.php').then(function successCallback(response){
+            $scope.$ctrl.files = response.data;
+        }, function errorCallback(response){
+            window.alert("error");
+        });
+    }
+     //loadFilesViaAjax
+    /*function FileTableController(){
         this.files = [
             {
                 filename: 'Moby - Flower',
@@ -27,7 +25,7 @@ angular
                 extension: '.txt'
             }
         ];
-    }
+    }*/
 });
 
 function loadFilesFromServer(){
