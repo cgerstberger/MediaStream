@@ -3,7 +3,7 @@ angular
     .component('fileTable', {
     templateUrl: 'js/file-table/file-table.template.html',
     controller: function($scope, $http){
-        $http.get('http://localhost/MediaStream/files.php').then(function successCallback(response){
+        $http.get('http://localhost/MediaStream/trunk/files.php').then(function successCallback(response){
             $scope.$ctrl.files = response.data;
         }, function errorCallback(response){
             window.alert("error");
@@ -36,14 +36,14 @@ function loadFilesFromServer(){
             this.files = objArr;
         }
     };
-    xmlhttp.open("GET", "http://localhost:80/MediaStream/files.php", true);
+    xmlhttp.open("GET", "http://localhost:80/MediaStream/trunk/files.php", true);
     xmlhttp.send();
 }
 
 function loadFilesViaAjax(){
     var t = this;
     $.ajax({
-        url: 'http://localhost:80/MediaStream/files.php',
+        url: 'http://localhost:80/MediaStream/trunk/files.php',
         async: true,
         dataType: 'json'
     }).done(function(data){
