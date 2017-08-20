@@ -1,10 +1,14 @@
 <table class="u-full-width">
     <thead>
-        <th>Filename</th>
-        <th>File-extension</th>
+        <tr>
+            <th>Filename</th>
+            <th>File-extension</th>
+        </tr>
     </thead>
     <tbody ng-repeat="file in $ctrl.files">
-        <td>{{file.filename}}</td>
-        <td>{{file.extension}}</td>
+        <tr>
+            <td>{{file.filename}}</td>
+            <td>{{file.extension}}</td>
+        </tr>
     </tbody>
 </table>

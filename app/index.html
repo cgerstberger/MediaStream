@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <!-- Basic Page Needs
@@ -22,6 +23,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/audio-player.css">
+    <link rel="stylesheet" href="mediaelement/build/mediaelementplayer.css">
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -34,6 +37,8 @@
     <script src="js/app.module.js"></script>
     <script src="js/file-table/file-table.module.js"></script>
     <script src="js/file-table/file-table.component.js"></script>
+    <script src="mediaelement/build/mediaelement-and-player.min.js"></script>
+    <script src="js/core/common.js"></script>
 
 </head>
 
@@ -43,19 +48,46 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div id="wrapper">
         <div class="header">
-            <h4 class="four columns">{{'Media Stream'}}</h4>
-            <div class="two column">1 + 2 = {{1+2}}</div>
+            <div class="row">
+                <h4 class="four columns">{{'Media Stream'}}</h4>
+                <div class="two columns">1 + 2 = {{1+2}}</div>
+            </div>
         </div>
         <div class="main" style="margin-left: 10%; margin-right: 10%">
             <file-table></file-table>
-            <file-table></file-table>
+            <div>
+                <div class="row">
+                    <div class="one-half column" style="margin-top: 25%">
+                        <h4>Basic Page</h4>
+                        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="one-half column" style="margin-top: 25%">
-                <h4>Basic Page</h4>
-                <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+        <div class="footer">
+            <div class="media-player">
+                <div class="video-player" style="display: none">
+                    <video class="mejs__player">
+                        <source type="video/mp4" src="/MediaStream/trunk/app/BigBuckBunny.mp4" />
+                    </video>
+                </div>
+                <div class="row audio-player">
+                    <div class="audio-info three columns">
+                        <div>
+                            <div class="divCover">
+                                <img class="cover" src="images/Alkaline_Trio_-_Mercy_Me_cover.jpg" alt="" />
+                            </div>
+                            <div class="divAudioName">
+                                <h5>Alkaline Trio - Mercy Me</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="audio-controls six columns">
+                        <audio id="audio-player" width="100%">
+                            <source type="audio/mp3" src="Media/Alkaline%20Trio%20-%20Mercy%20Me.MP3" />
+                        </audio>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -63,4 +95,5 @@
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+
 </html>

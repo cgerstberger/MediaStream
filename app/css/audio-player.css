@@ -1,0 +1,360 @@
+.audio-player .cover {
+    height: 100%;
+    width: auto;
+    max-height: 40px;
+}
+
+.audio-player h5 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.audio-player .divCover {
+    min-width: 40px;
+    float: left;
+}
+
+.audio-info > div > div{
+    margin-right: 10px;
+}
+
+/* mobile */
+
+@media (min-width: 200px) {
+    .audio-player .cover,
+    .mejs__currenttime-container,
+    .mejs__duration-container,
+    .mejs__horizontal-volume-slider,
+    .mejs__volume-button{
+        display: none;
+    }
+  .audio-player .container {
+    width: 80%; }
+  .audio-player .column,
+  .audio-player .columns {
+    margin-left: 4%; }
+  .audio-player .column:first-child,
+  .audio-player .columns:first-child {
+    margin-left: 0; }
+
+  .audio-player .one.column,
+  .audio-player .one.columns                    { width: 4.66666666667%; }
+  .audio-player .two.columns                    { width: 13.3333333333%; }
+  .audio-player .three.columns                  { width: 39.3333333333%; }
+  .audio-player .four.columns                   { width: 30.6666666667%; }
+  .audio-player .five.columns                   { width: 39.3333333333%; }
+  .audio-player .six.columns                    { width: 56.6666666667%; }
+  .audio-player .seven.columns                  { width: 56.6666666667%; }
+  .audio-player .eight.columns                  { width: 65.3333333333%; }
+  .audio-player .nine.columns                   { width: 74.0%;          }
+  .audio-player .ten.columns                    { width: 82.6666666667%; }
+  .audio-player .eleven.columns                 { width: 91.3333333333%; }
+  .audio-player .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .audio-player .one-third.column               { width: 30.6666666667%; }
+  .audio-player .two-thirds.column              { width: 65.3333333333%; }
+
+  .audio-player .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .audio-player .offset-by-one.column,
+  .audio-player .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .audio-player .offset-by-two.column,
+  .audio-player .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .audio-player .offset-by-three.column,
+  .audio-player .offset-by-three.columns        { margin-left: 26%;            }
+  .audio-player .offset-by-four.column,
+  .audio-player .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .audio-player .offset-by-five.column,
+  .audio-player .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .audio-player .offset-by-six.column,
+  .audio-player .offset-by-six.columns          { margin-left: 52%;            }
+  .audio-player .offset-by-seven.column,
+  .audio-player .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .audio-player .offset-by-eight.column,
+  .audio-player .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .audio-player .offset-by-nine.column,
+  .audio-player .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .audio-player .offset-by-ten.column,
+  .audio-player .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .audio-player .offset-by-eleven.column,
+  .audio-player .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .audio-player .offset-by-one-third.column,
+  .audio-player .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .audio-player .offset-by-two-thirds.column,
+  .audio-player .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .audio-player .offset-by-one-half.column,
+  .audio-player .offset-by-one-half.columns     { margin-left: 52%; }
+}
+
+/* Larger than mobile */
+
+@media (min-width: 400px) {
+    .mejs__currenttime-container,
+    .mejs__duration-container{
+        display: none;
+    }
+    .audio-player .cover,
+    .mejs__horizontal-volume-slider,
+    .mejs__volume-button{
+        display: block;
+    }
+  .audio-player .container {
+    width: 80%; }
+  .audio-player .column,
+  .audio-player .columns {
+    margin-left: 4%; }
+  .audio-player .column:first-child,
+  .audio-player .columns:first-child {
+    margin-left: 0; }
+
+  .audio-player .one.column,
+  .audio-player .one.columns                    { width: 4.66666666667%; }
+  .audio-player .two.columns                    { width: 13.3333333333%; }
+  .audio-player .three.columns                  { width: 39.3333333333%; }
+  .audio-player .four.columns                   { width: 30.6666666667%; }
+  .audio-player .five.columns                   { width: 39.3333333333%; }
+  .audio-player .six.columns                    { width: 56.6666666667%; }
+  .audio-player .seven.columns                  { width: 56.6666666667%; }
+  .audio-player .eight.columns                  { width: 65.3333333333%; }
+  .audio-player .nine.columns                   { width: 74.0%;          }
+  .audio-player .ten.columns                    { width: 82.6666666667%; }
+  .audio-player .eleven.columns                 { width: 91.3333333333%; }
+  .audio-player .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .audio-player .one-third.column               { width: 30.6666666667%; }
+  .audio-player .two-thirds.column              { width: 65.3333333333%; }
+
+  .audio-player .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .audio-player .offset-by-one.column,
+  .audio-player .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .audio-player .offset-by-two.column,
+  .audio-player .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .audio-player .offset-by-three.column,
+  .audio-player .offset-by-three.columns        { margin-left: 26%;            }
+  .audio-player .offset-by-four.column,
+  .audio-player .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .audio-player .offset-by-five.column,
+  .audio-player .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .audio-player .offset-by-six.column,
+  .audio-player .offset-by-six.columns          { margin-left: 52%;            }
+  .audio-player .offset-by-seven.column,
+  .audio-player .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .audio-player .offset-by-eight.column,
+  .audio-player .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .audio-player .offset-by-nine.column,
+  .audio-player .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .audio-player .offset-by-ten.column,
+  .audio-player .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .audio-player .offset-by-eleven.column,
+  .audio-player .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .audio-player .offset-by-one-third.column,
+  .audio-player .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .audio-player .offset-by-two-thirds.column,
+  .audio-player .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .audio-player .offset-by-one-half.column,
+  .audio-player .offset-by-one-half.columns     { margin-left: 52%; }
+}
+
+
+/* Larger than phablet (also point when grid becomes active) */
+
+@media (min-width: 550px) {
+    .mejs__currenttime-container,
+    .mejs__duration-container{
+        display: block;
+    }
+   .audio-player .container {
+    width: 80%; }
+  .audio-player .column,
+  .audio-player .columns {
+    margin-left: 4%; }
+  .audio-player .column:first-child,
+  .audio-player .columns:first-child {
+    margin-left: 0; }
+
+  .audio-player .one.column,
+  .audio-player .one.columns                    { width: 4.66666666667%; }
+  .audio-player .two.columns                    { width: 13.3333333333%; }
+  .audio-player .three.columns                  { width: 30.6666666667%; }
+  .audio-player .four.columns                   { width: 30.6666666667%; }
+  .audio-player .five.columns                   { width: 39.3333333333%; }
+  .audio-player .six.columns                    { width: 65.3333333333%; }
+  .audio-player .seven.columns                  { width: 56.6666666667%; }
+  .audio-player .eight.columns                  { width: 65.3333333333%; }
+  .audio-player .nine.columns                   { width: 74.0%;          }
+  .audio-player .ten.columns                    { width: 82.6666666667%; }
+  .audio-player .eleven.columns                 { width: 91.3333333333%; }
+  .audio-player .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .audio-player .one-third.column               { width: 30.6666666667%; }
+  .audio-player .two-thirds.column              { width: 65.3333333333%; }
+
+  .audio-player .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .audio-player .offset-by-one.column,
+  .audio-player .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .audio-player .offset-by-two.column,
+  .audio-player .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .audio-player .offset-by-three.column,
+  .audio-player .offset-by-three.columns        { margin-left: 26%;            }
+  .audio-player .offset-by-four.column,
+  .audio-player .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .audio-player .offset-by-five.column,
+  .audio-player .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .audio-player .offset-by-six.column,
+  .audio-player .offset-by-six.columns          { margin-left: 52%;            }
+  .audio-player .offset-by-seven.column,
+  .audio-player .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .audio-player .offset-by-eight.column,
+  .audio-player .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .audio-player .offset-by-nine.column,
+  .audio-player .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .audio-player .offset-by-ten.column,
+  .audio-player .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .audio-player .offset-by-eleven.column,
+  .audio-player .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .audio-player .offset-by-one-third.column,
+  .audio-player .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .audio-player .offset-by-two-thirds.column,
+  .audio-player .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .audio-player .offset-by-one-half.column,
+  .audio-player .offset-by-one-half.columns     { margin-left: 52%; }
+}
+
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .audio-player .container {
+    width: 80%; }
+  .audio-player .column,
+  .audio-player .columns {
+    margin-left: 4%; }
+  .audio-player .column:first-child,
+  .audio-player .columns:first-child {
+    margin-left: 0; }
+
+  .audio-player .one.column,
+  .audio-player .one.columns                    { width: 4.66666666667%; }
+  .audio-player .two.columns                    { width: 13.3333333333%; }
+  .audio-player .three.columns                  { width: 30.6666666667%; }
+  .audio-player .four.columns                   { width: 30.6666666667%; }
+  .audio-player .five.columns                   { width: 39.3333333333%; }
+  .audio-player .six.columns                    { width: 65.3333333333%; }
+  .audio-player .seven.columns                  { width: 56.6666666667%; }
+  .audio-player .eight.columns                  { width: 65.3333333333%; }
+  .audio-player .nine.columns                   { width: 74.0%;          }
+  .audio-player .ten.columns                    { width: 82.6666666667%; }
+  .audio-player .eleven.columns                 { width: 91.3333333333%; }
+  .audio-player .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .audio-player .one-third.column               { width: 30.6666666667%; }
+  .audio-player .two-thirds.column              { width: 65.3333333333%; }
+
+  .audio-player .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .audio-player .offset-by-one.column,
+  .audio-player .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .audio-player .offset-by-two.column,
+  .audio-player .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .audio-player .offset-by-three.column,
+  .audio-player .offset-by-three.columns        { margin-left: 26%;            }
+  .audio-player .offset-by-four.column,
+  .audio-player .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .audio-player .offset-by-five.column,
+  .audio-player .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .audio-player .offset-by-six.column,
+  .audio-player .offset-by-six.columns          { margin-left: 52%;            }
+  .audio-player .offset-by-seven.column,
+  .audio-player .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .audio-player .offset-by-eight.column,
+  .audio-player .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .audio-player .offset-by-nine.column,
+  .audio-player .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .audio-player .offset-by-ten.column,
+  .audio-player .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .audio-player .offset-by-eleven.column,
+  .audio-player .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .audio-player .offset-by-one-third.column,
+  .audio-player .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .audio-player .offset-by-two-thirds.column,
+  .audio-player .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .audio-player .offset-by-one-half.column,
+  .audio-player .offset-by-one-half.columns     { margin-left: 52%; }
+}
+
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    .audio-player .container {
+    width: 80%; }
+  .audio-player .column,
+  .audio-player .columns {
+    margin-left: 4%; }
+  .audio-player .column:first-child,
+  .audio-player .columns:first-child {
+    margin-left: 0; }
+
+  .audio-player .one.column,
+  .audio-player .one.columns                    { width: 4.66666666667%; }
+  .audio-player .two.columns                    { width: 13.3333333333%; }
+  .audio-player .three.columns                  { width: 22%;            }
+  .audio-player .four.columns                   { width: 30.6666666667%; }
+  .audio-player .five.columns                   { width: 39.3333333333%; }
+  .audio-player .six.columns                    { width: 48%;            }
+  .audio-player .seven.columns                  { width: 56.6666666667%; }
+  .audio-player .eight.columns                  { width: 65.3333333333%; }
+  .audio-player .nine.columns                   { width: 74.0%;          }
+  .audio-player .ten.columns                    { width: 82.6666666667%; }
+  .audio-player .eleven.columns                 { width: 91.3333333333%; }
+  .audio-player .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .audio-player .one-third.column               { width: 30.6666666667%; }
+  .audio-player .two-thirds.column              { width: 65.3333333333%; }
+
+  .audio-player .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .audio-player .offset-by-one.column,
+  .audio-player .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .audio-player .offset-by-two.column,
+  .audio-player .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .audio-player .offset-by-three.column,
+  .audio-player .offset-by-three.columns        { margin-left: 26%;            }
+  .audio-player .offset-by-four.column,
+  .audio-player .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .audio-player .offset-by-five.column,
+  .audio-player .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .audio-player .offset-by-six.column,
+  .audio-player .offset-by-six.columns          { margin-left: 52%;            }
+  .audio-player .offset-by-seven.column,
+  .audio-player .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .audio-player .offset-by-eight.column,
+  .audio-player .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .audio-player .offset-by-nine.column,
+  .audio-player .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .audio-player .offset-by-ten.column,
+  .audio-player .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .audio-player .offset-by-eleven.column,
+  .audio-player .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .audio-player .offset-by-one-third.column,
+  .audio-player .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .audio-player .offset-by-two-thirds.column,
+  .audio-player .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .audio-player .offset-by-one-half.column,
+  .audio-player .offset-by-one-half.columns     { margin-left: 52%; }
+}
