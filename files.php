@@ -36,9 +36,9 @@
     }
     echo json_encode($mediaFiles);
 	
-	$files = array();
+	/*$files = array();
 	$files[0] = array('filename' => 'Moby - Dick', 'extension' => 'mp3');
 	$files[1] = array('filename' => 'People Are Awesome', 'extension' => '.mp4');
 	$files[2] = array('filename' => 'Test', 'extension' => '.txt');
-	//echo json_encode($files);
+	echo json_encode($files);*/
 ?>

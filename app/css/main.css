@@ -27,7 +27,7 @@ table tbody tr:active{
     max-height: 60px;
     width: 100%;
     background-color: #181818;
-    display: block;
+    display: none;
     padding: 0px;
 }
 

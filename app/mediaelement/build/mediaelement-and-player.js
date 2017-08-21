@@ -3122,14 +3122,14 @@ Object.assign(_player2.default.prototype, {
 
 		mute.addEventListener('mouseenter', function (e) {
 			if (e.target === mute) {
-				volumeSlider.style.display = 'block';
+				/*volumeSlider.style.display = 'block';*/
 				mouseIsOver = true;
 				e.preventDefault();
 				e.stopPropagation();
 			}
 		});
 		mute.addEventListener('focusin', function () {
-			volumeSlider.style.display = 'block';
+			/*volumeSlider.style.display = 'block';*/
 			mouseIsOver = true;
 		});
 
