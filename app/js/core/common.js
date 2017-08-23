@@ -3,6 +3,16 @@ $(document).ready(function () {
         $(".footer").css("min-height", 0).slideToggle(function(){
             $(".footer").css("min-height", "");
         });
+        $mainBottom = $(".main").css("bottom");
+        if($mainBottom == "60px") {
+            $(".main").animate({
+                bottom: "0px"
+            });
+        } else{
+            $(".main").animate({
+                bottom: "60px"
+            });
+        }
     });
     $(".footer").click(function(){
         event.stopPropagation();

@@ -1,8 +1,15 @@
 .header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
     color: white;
     background-color: #333;
     overflow: auto;
-    padding: 1rem;
+    padding: 10px;
     margin-bottom: 0rem;
 }
 
@@ -16,6 +23,16 @@ table tbody tr:hover{
 
 table tbody tr:active{
     background-color: darkgray;
+}
+
+.main{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 60px;
+    bottom: 0px;
+    height: auto;
+    overflow-y: auto;
 }
 
 .footer{
