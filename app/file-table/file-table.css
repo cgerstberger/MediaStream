@@ -1,0 +1,27 @@
+.divPlayButton{
+    background-color: lightseagreen; /* goldenrod */
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    min-height: 30px;
+    /*border: 1px black solid;*/
+    border-radius: 15px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow: 2px 1px 2px;
+}
+
+.divPlayButton:hover{
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+.divPlayButton:active{
+    transform: translate3d(1px, 1px, 0px);
+    box-shadow: 1px 1px 2px;
+}
+
+.divPlayButton > img{
+    vertical-align: middle;
+}

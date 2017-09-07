@@ -20,11 +20,11 @@
 
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/file-table.css">
-    <link rel="stylesheet" href="css/audio-player.css">
+    <link rel="stylesheet" href="core/normalize.css">
+    <link rel="stylesheet" href="core/skeleton.css">
+    <link rel="stylesheet" href="core/main.css">
+    <link rel="stylesheet" href="file-table/file-table.css">
+    <link rel="stylesheet" href="audio-player/audio-player.css">
     <link rel="stylesheet" href="mediaelement/build/mediaelementplayer.css">
 
     <!-- Favicon
@@ -33,13 +33,14 @@
 
     <!-- JS
   -------------------------------------------------- -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/app.module.js"></script>
-    <script src="js/file-table/file-table.module.js"></script>
-    <script src="js/file-table/file-table.component.js"></script>
+    <script src="core/jquery-3.2.1.min.js"></script>
+    <script src="core/angular.min.js"></script>
+    <script src="core/app.module.js"></script>
+    <script src="file-table/file-table.module.js"></script>
+    <script src="file-table/file-table.component.js"></script>
     <script src="mediaelement/build/mediaelement-and-player.js"></script>
-    <script src="js/core/common.js"></script>
+    <script src="core/common.js"></script>
+    <script src="audio-player/audio-player.js"></script>
 
 </head>
 
@@ -51,7 +52,6 @@
         <div class="header">
             <div class="row">
                 <h4 class="four columns">{{'Media Stream'}}</h4>
-                <div class="two columns">1 + 2 = {{1+2}}</div>
             </div>
         </div>
         <div class="main" style="padding-left: 10%; padding-right: 10%">
