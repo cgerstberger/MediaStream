@@ -87,9 +87,36 @@
                         </div>
                     </div>
                     <div class="audio-controls six columns">
-                        <audio id="audio-player" width="100%">
-                            <source type="audio/mp3" src="http://localhost:80/MediaStream/trunk/musicStream.php?file=abc.mp3" /> <!-- src="Media/Alkaline%20Trio%20-%20Mercy%20Me.MP3" />-->
-                        </audio>
+                        <!--<audio id="audio-player" width="100%">
+                            <source type="audio/mp3" src="http://localhost:80/MediaStream/trunk/musicStream.php?file=abc.mp3" />
+                        </audio>-->
+                        <div>
+                            <div id="audioPlayPause">
+                                <!--<img src="images/icons/play/play-button-white.png" />-->
+                                <div class="audioPlayIcon"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="audioCurrentTime">
+                                00:00
+                            </div>
+                        </div>
+                        <div>
+                            <div id="audioTimeBar">
+                                <div id="audioTimeProgress"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="audioVolume">
+                                <div id="audioVolumeImgDiv"><img src="images/icons/pause/pause-button-white-smaller.png" /></div>
+                                <div id="audioVolumeBar">
+                                    <div id="audioVolumeControl"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div>
+                            <input type="range" min="0" max="100" />
+                        </div>-->
                     </div>
                 </div>
             </div>

@@ -18,6 +18,107 @@
     margin-right: 10px;
 }
 
+.audio-controls img{
+    width: 16px;
+    height: 16px;
+}
+
+.audio-controls img:hover{
+    margin: -2px -2px;
+    width: 20px;
+    height: 20px;
+}
+
+.audio-controls > div{
+    float: left;
+    padding: 8px 10px;
+}
+
+#audioCurrentTime{
+    color: white;
+    font-size: small;
+}
+
+#audioTimeBar{
+    width: 200px;
+    height: 4px;
+    background-color: floralwhite;
+    border-radius: 2px;
+    margin: 7px 0px;
+}
+
+#audioTimeProgress{
+    width: 50px;
+    height: 4px;
+    background-color: chartreuse;
+    border-radius: 2px;
+}
+
+#audioVolumeBar{
+    width: 3px;
+    height: 0px;
+    position: absolute;
+    background-color: lightgray;
+    top: 0px;
+    margin-left: -4px;
+    border-radius: 2px;
+    border: 0px solid gray;
+    margin-top: 10px;
+    padding: 0px 9px;
+}
+
+#audioVolumeControl{
+    width: 3px;
+    height: 100%;
+    background-color: #f50;
+}
+
+.audioPlayIcon{
+    background:url("../images/icons/play/play-button-white.png");
+    background-size:cover;
+    width: 16px;
+    height: 16px;
+}
+
+.audioPlayIcon:hover{
+    margin: -2px -2px;
+    width: 20px;
+    height: 20px;
+}
+
+.audioPauseIcon{
+    background:url("../images/icons/pause/pause-button-white-smaller.png");
+    background-size:cover;
+    width: 16px;
+    height: 16px;
+}
+
+.audioPauseIcon:hover{
+    margin: -2px -2px;
+    width: 20px;
+    height: 20px;
+}
+
+/*#volumeBar:hover{
+    width: 24px;
+    height: 80px;
+    position: absolute;
+    background-color: burlywood;
+    top: -80px;
+    margin-left: -4px;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    opacity: 1;
+}*/
+
+/*#volumeBar{
+    width: 24px;
+    height: 80px;
+    background-color: blueviolet;
+    border-radius: 2px;
+    border: 0.5px solid black;
+}*/
+
 /* mobile */
 
 @media (min-width: 200px) {
