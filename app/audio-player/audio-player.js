@@ -4,6 +4,11 @@ var context;
 var sourceNode;
 var audioPlaying = false;
 
+var audioTimer;
+var audioCurrentTime = 0;
+var audioDuration = 0;
+var audioTimeLoadOffset = 0;
+
 var hoverVolumeIcon = false;
 var hoverVolumeBar = false;
 
@@ -19,7 +24,7 @@ $(document).ready(function () {
         alert("Web Audio API is not supported in this browser.")
     }
 
-    $("#audioVolumeImgDiv").hover(function () {
+    $(".audioVolumeIcon").hover(function () {
         $("#audioVolumeBar").animate({
             'height': "62px",
             'top': "-80px",
@@ -89,13 +94,20 @@ function reloadAudioPlayer(fullname) {
             sourceNode = context.createBufferSource();
             sourceNode.buffer = buffer;
             sourceNode.connect(context.destination);
+            sourceNode.onended = audioEnded;
             sourceNode.start(0);
+            audioTimeLoadOffset = context.currentTime;
+            audioCurrentTime = 0;
             startAudio();
         }, function () {
             alert("error");
         });
     };
     request.send();
+}
+
+function audioEnded(){
+    stopAudio();
 }
 
 function showAudioPlayer() {
@@ -130,10 +142,55 @@ function startStopAudio() {
 
 function startAudio() {
     context.resume();
+    audioTimer = setInterval(tickAudio, 1000);
     $("#audioPlayPause > div").addClass("audioPauseIcon").removeClass("audioPlayIcon");
 }
 
 function stopAudio() {
     context.suspend();
+    clearInterval(audioTimer);
     $("#audioPlayPause > div").addClass("audioPlayIcon").removeClass("audioPauseIcon");
 }
+
+function tickAudio(){
+    audioCurrentTime ++;
+    console.log("Context.CurrentTime:" + context.currentTime);
+    console.log("AudioCurrentTime:" + audioCurrentTime);
+    console.log("Offset:" + audioTimeLoadOffset);
+    
+    setCurrentAudioTime();
+    refreshAudioTimeProgressBar();
+    
+}
+
+function setCurrentAudioTime(){
+    $("#audioCurrentTime")[0].innerText = convertSecondsToHHMMSS(audioCurrentTime);
+}
+
+function convertSecondsToHHMMSS(timeInSeconds){
+    var curTime = timeInSeconds;
+    var hours = Math.floor(curTime / 3600);
+    curTime -= hours * 3600;
+    var minutes = Math.floor(curTime / 60);
+    curTime -= minutes * 60;
+    var seconds = curTime % 60;
+    
+    var hourString = hours > 0 ? (hours < 10 ? "0" + hours : hours) + ":" : "";
+    if(minutes < 10) minutes = "0" + minutes;
+    if(seconds < 10) seconds = "0" + seconds;
+    
+    return hourString + minutes + ":" + seconds;
+}
+
+String.prototype.toHHMMSS = function () {
+    var sec_num = parseInt(this, 10); // don't forget the second param
+    return convertSecondsToHHMMSS(sec_num);
+}
+
+function refreshAudioTimeProgressBar(){
+    var duration = Math.floor(sourceNode.buffer.duration);
+    var timeBarWidth = $("#audioTimeBar").width();
+    var widthOfSecond = timeBarWidth / duration;
+    $("#audioTimeProgress").css("width", audioCurrentTime * widthOfSecond);
+}
+
